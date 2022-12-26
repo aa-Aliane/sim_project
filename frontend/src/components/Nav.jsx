@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <nav className="nav dark">
       <div className="nav__about">About</div>
-      <div>Plagiarism detection in ASJP articles</div>
+      <div className="fs-l fw-medium">Plagiarism detection in scientific writings</div>
       <div className="nav__home">
         <FontAwesomeIcon className="fs-xl" icon={faHouse} />
         <p>Home</p>

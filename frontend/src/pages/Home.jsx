@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf, faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFilePdf,
+  faSearch,
+  faCoffee,
+} from "@fortawesome/free-solid-svg-icons";
 import ResultsList from "../components/ResultsList";
 import { api } from "../api";
 
@@ -40,11 +44,26 @@ const Home = () => {
     <main className="main__container">
       <div className="file" data-state={pdfLoaded}>
         {!pdfLoaded && (
-          <textarea
-            className="textarea fs-m fw-regular"
-            rows="10"
-            onChange={HandleTextTyped}
-          ></textarea>
+          <div
+            className="file__text"
+            onClick={() => {
+              setClosedState(true);
+              setTimeout(() => {
+                setTextTyped("");
+              }, 200);
+            }}
+          >
+            <textarea
+              className="textarea fs-m fw-regular"
+              rows="10"
+              onChange={HandleTextTyped}
+              value={textTyped}
+            ></textarea>
+            <span
+              className="file__text__clear"
+              display-state={!textTyped ? "false" : "true"}
+            ></span>
+          </div>
         )}
         {pdfLoaded && (
           <>

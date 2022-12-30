@@ -11,7 +11,7 @@ import os, json
 @permission_classes([AllowAny])
 def get_context(request):
     print(request.data["query_text"])
-    results = search(request.data["query_text"], 5, index, model)
+    results = search(request.data["query_text"], 7, index, model)
     data = results
 
     return Response(status=status.HTTP_200_OK, data=data)

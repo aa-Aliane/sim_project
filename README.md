@@ -1,1 +1,1 @@
-# sim_project
+## similarity detection platform

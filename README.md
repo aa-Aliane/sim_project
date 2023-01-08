@@ -1,1 +1,1 @@
-## similarity detection platform
+## **similarity detection platform**
